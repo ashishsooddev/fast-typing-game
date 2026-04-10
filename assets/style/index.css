@@ -8,9 +8,9 @@ body {
     color: white;
     height: 100svh;
     position: relative;
-    display: flex;
+    text-align: center;
     justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
 .game-container {
