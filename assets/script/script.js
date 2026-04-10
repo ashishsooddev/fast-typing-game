@@ -99,3 +99,23 @@ function updateTime() {
         endGame();
     }
 }
+
+input.addEventListener("input", function () {
+
+    let typedWord = input.value.trim();
+    let currentCorrectWord = randomWords[index];
+
+    if (typedWord === currentCorrectWord) {
+        score = score + 1;
+        index = index + 1;
+
+        scoreDisplay.textContent = score;
+
+        input.value = "";
+        if (index === words.length) {
+            endGame();
+        } else {
+            showWord();
+        }
+    }
+});
