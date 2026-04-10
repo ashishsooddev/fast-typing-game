@@ -86,3 +86,52 @@ function startGame() {
 }
 
 startBtn.addEventListener("click", startGame);
+
+function showWord() {
+    currentWord.textContent = randomWords[index];
+}
+
+function updateTime() {
+    time = time - 1;
+    timeDisplay.textContent = time;
+
+    if (time <= 0) {
+        endGame();
+    }
+}
+
+input.addEventListener("input", function () {
+
+    let typedWord = input.value.trim();
+    let currentCorrectWord = randomWords[index];
+
+    if (typedWord === currentCorrectWord) {
+        score = score + 1;
+        index = index + 1;
+
+        scoreDisplay.textContent = score;
+
+        input.value = "";
+        if (index === words.length) {
+            endGame();
+        } else {
+            showWord();
+        }
+    }
+
+});
+
+function endGame() {
+    clearInterval(timer);
+    input.disabled = true;
+    music.pause();
+
+    let percentage = ((score / words.length) * 100);
+
+    currentWord.textContent = "Game Over!";
+    finalScore.textContent =
+        "Score: " + score +
+        " | Accuracy: " + percentage.toFixed(2) + "%";
+
+    resultSection.classList.remove("hidden");
+}
