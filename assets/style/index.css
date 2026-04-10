@@ -5,7 +5,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: url("../media/background-image.jpg") no-repeat center center/cover;
-    color: white;
+    color: #fff;
     height: 100svh;
     position: relative;
     text-align: center;
@@ -20,9 +20,14 @@ body {
     margin-top: 0;
     border-radius: 20px;
     text-align: center;
-    height: 600px;
+    height: 700px;
     width: 600px;
-    background-color: rgba(44, 44, 45, 0.6);
+    background-color: rgba(44, 44, 45, 0.8);
+    border: 1px solid #fff;
+}
+
+h1 {
+    color: rgb(5, 236, 236);
 }
 
 .game-title {
@@ -49,6 +54,7 @@ body {
 }
 
 input {
+    color: #fff;
     padding: 10px;
     font-size: 1.2rem;
     width: 250px;
@@ -59,7 +65,8 @@ input {
 button {
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 1.2 rem;
+    font-weight: 600;
+    font-size: 1.9rem;
     color: #fff;
     background: #58b7d1;
     border: none;
