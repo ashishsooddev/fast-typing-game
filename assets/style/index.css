@@ -1,2 +1,26 @@
 @charset "utf-8";
 @import "./reset.css";
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    text-align: center;
+}
+
+.game-container {
+    margin-top: 50px;
+}
+
+.game-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1.5rem;
+}
