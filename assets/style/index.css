@@ -4,9 +4,11 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #141e30, #243b55);
-    color: white;
     text-align: center;
+    background:  url("../media/background-image.jpg") no-repeat center center/cover;
+    color: white;
+    height: 100svh;
+    position: relative;
 }
 
 .game-container {
