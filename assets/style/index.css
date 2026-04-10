@@ -16,7 +16,7 @@ body {
     border-radius: 20px;
     height: 600px;
     width: 600px;
-    background-color: #1c7a92;
+    background-color: rgba(10, 184, 227, 0.4);
 }
 
 .game-title {
@@ -53,7 +53,8 @@ input {
 button {
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 1.2 rem;
+    color: #fff;
     background: #58b7d1;
     border: none;
     border-radius: 5px;
@@ -62,7 +63,7 @@ button {
 
 
 button:hover {
-    background: #1c7a92;
+    background: #0439f8;
 }
 
 #result-section {
