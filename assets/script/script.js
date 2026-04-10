@@ -60,3 +60,27 @@ let index = 0;
 let score = 0;
 let time = 99;
 let timer;
+
+function startGame() {
+    randomWords = shuffle([...words]);
+    index = 0;
+    score = 0;
+    time = 99;
+
+    input.disabled = false;
+    input.value = "";
+    input.focus();
+
+    scoreDisplay.textContent = score;
+    timeDisplay.textContent = time;
+
+    resultSection.classList.add("hidden");
+
+    showWord();
+
+    clearInterval(timer);
+    timer = setInterval(updateTime, 1000);
+
+    music.currentTime = 0;
+    music.play();
+}
