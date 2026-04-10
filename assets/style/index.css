@@ -10,11 +10,16 @@ body {
 }
 
 .game-container {
-    margin-top: 50px;
+    margin-top: 40px;
+    border-radius: 20px;
+    height: 600px;
+    width: 600px;
+    background-color: #1c7a92;
 }
 
 .game-title {
-    font-size: 3rem;
+    font-size: 4rem;
+    padding-top: 10px;
     margin-bottom: 20px;
 }
 
@@ -27,6 +32,8 @@ body {
 
 .word-box {
     margin: 30px 0;
+    width: 400px;
+    align-items: center;
     font-size: 2rem;
     background: #ffffff22;
     padding: 20px;
