@@ -4,11 +4,13 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    text-align: center;
     background:  url("../media/background-image.jpg") no-repeat center center/cover;
     color: white;
     height: 100svh;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .game-container {
