@@ -55,3 +55,16 @@ button {
 button:hover {
     background: #1c7a92;
 }
+
+#result-section {
+    margin: 30px;
+    font-size: 1.4rem;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+    animation: fadeIn 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
