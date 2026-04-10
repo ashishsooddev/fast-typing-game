@@ -86,3 +86,7 @@ function startGame() {
 }
 
 startBtn.addEventListener("click", startGame);
+
+function showWord() {
+    currentWord.textContent = randomWords[index];
+}
