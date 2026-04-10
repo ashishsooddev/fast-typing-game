@@ -5,10 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/media/cartoon-11551057788bw864qbup7.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style/index.css" media="all">
-    <script src="./assets/script/script.js"></script>
+    <script src="./assets/script/script.js" defer></script>
     <title>Speed Type Arena</title>
 </head>
 <body>
-    
+        <div class="game-container">
+            <h1 class="game-title">SpeedType Arena</h1>
+
+            <div class="game-info">
+                <p>Time: <span id="time-display">99</span>s</p>
+                <p>Score: <span id="score-display">0</span></p>
+            </div>
+
+            <div class="word-box">
+                <h2 id="current-word">Press Start</h2>
+            </div>
+
+            <input type="text" id="word-input" placeholder="Type the word..." disabled>
+
+            <button id="start-button">Start Game</button>
+
+            <div id="result-section" class="hidden">
+                <h2>Game Over!</h2>
+                <p id="final-score"></p>
+            </div>
+        </div>  
 </body>
 </html>
