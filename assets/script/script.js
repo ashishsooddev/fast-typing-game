@@ -54,3 +54,9 @@ class Score {
     getHits() { return this.#hits; }
     getPercentage() { return this.#percentage; }
 }
+
+let randomWords = [];
+let index = 0;
+let score = 0;
+let time = 99;
+let timer;
