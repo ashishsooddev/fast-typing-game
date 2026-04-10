@@ -84,3 +84,5 @@ function startGame() {
     music.currentTime = 0;
     music.play();
 }
+
+startBtn.addEventListener("click", startGame);
