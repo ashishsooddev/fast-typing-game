@@ -90,3 +90,12 @@ startBtn.addEventListener("click", startGame);
 function showWord() {
     currentWord.textContent = randomWords[index];
 }
+
+function updateTime() {
+    time = time - 1;
+    timeDisplay.textContent = time;
+
+    if (time <= 0) {
+        endGame();
+    }
+}
