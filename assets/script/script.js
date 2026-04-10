@@ -15,3 +15,12 @@ const words = ['dinosaur', 'love', 'pineapple', 'calendar', 'robot', 'building',
      'science', 'mystery', 'famous', 'league', 'memory', 'leather', 'planet',
      'software', 'update', 'yellow', 'keyboard', 'window'];
 
+const timeDisplay = document.getElementById("time-display");
+const scoreDisplay = document.getElementById("score-display");
+const currentWord = document.getElementById("current-word");
+const input = document.getElementById("word-input");
+
+const startBtn = document.getElementById("start-button");
+const resultSection = document.getElementById("result-section");
+const finalScore = document.getElementById("final-score");
+const music = document.getElementById("game-music");
