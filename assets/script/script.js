@@ -118,4 +118,20 @@ input.addEventListener("input", function () {
             showWord();
         }
     }
+
 });
+
+function endGame() {
+    clearInterval(timer);
+    input.disabled = true;
+    music.pause();
+
+    let percentage = ((score / words.length) * 100);
+
+    currentWord.textContent = "Game Over!";
+    finalScore.textContent =
+        "Score: " + score +
+        " | Accuracy: " + percentage.toFixed(2) + "%";
+
+    resultSection.classList.remove("hidden");
+}
