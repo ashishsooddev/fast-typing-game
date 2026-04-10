@@ -24,3 +24,17 @@ const startBtn = document.getElementById("start-button");
 const resultSection = document.getElementById("result-section");
 const finalScore = document.getElementById("final-score");
 const music = document.getElementById("game-music");
+
+function shuffle(arr) {
+    let newArray = [...arr];
+
+    for (let i = newArray.length - 1; i > 0; i--) {
+        let randomIndex = Math.floor(Math.random() * (i + 1));
+
+        let temp = newArray[i];
+        newArray[i] = newArray[randomIndex];
+        newArray[randomIndex] = temp;
+    }
+
+    return newArray;
+}
