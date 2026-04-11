@@ -4,29 +4,56 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #141e30, #243b55);
-    color: white;
+    background: url("../media/background-image.jpg") no-repeat center center/cover;
+    color: #fff;
+    height: 100svh;
+    position: relative;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .game-container {
-    margin-top: 50px;
+    display: block;
+    margin-top: 0;
+    border-radius: 20px;
+    text-align: center;
+    height: 600px;
+    width: 600px;
+    background-color: rgba(44, 44, 45, 0.8);
+    border: 1px solid #fff;
+}
+
+h1 {
+    color: #90f0ff;
 }
 
 .game-title {
-    font-size: 3rem;
+    background: #ffffff22;
+    border-radius: 15px;
+    font-size: 4rem;
+    padding: 10px;  
     margin-bottom: 20px;
 }
 
 .game-info {
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     gap: 40px;
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+.game-info p{
+    font-weight: 700;
 }
 
 .word-box {
     margin: 30px 0;
+    width: 100%;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2rem;
     background: #ffffff22;
     padding: 20px;
@@ -34,17 +61,23 @@ body {
 }
 
 input {
-    padding: 10px;
-    font-size: 1.2rem;
-    width: 250px;
+    padding: 15px;
+    font-size: 2rem;
+    margin: 10px 0 5px 0;
+    text-align: center;
+    width: 100%;
     border-radius: 5px;
     border: none;
 }
-
+input::placeholder{
+    color: #fff;
+}
 button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
+    margin-top: 30px;
+    padding: 15px 25px;
+    font-weight: 600;
+    font-size: 1.9rem;
+    color: #fff;
     background: #58b7d1;
     border: none;
     border-radius: 5px;
@@ -53,12 +86,12 @@ button {
 
 
 button:hover {
-    background: #1c7a92;
+    background: #0439f8;
 }
 
 #result-section {
     margin: 30px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     background: rgba(0, 0, 0, 0.4);
     padding: 20px;
     border-radius: 12px;
@@ -67,4 +100,69 @@ button:hover {
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 768px) {
+
+    .game-container {
+        width: 90%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .game-title {
+        font-size: 2.5rem;
+    }
+
+    .word-box {
+        width: 80%;
+        margin: 20px auto;
+        font-size: 1.6rem;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    button {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .game-container {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    .game-title {
+        font-size: 2rem;
+    }
+
+    .game-info {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.2rem;
+    }
+
+    .word-box {
+        width: 90%;
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+
+    input {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    button {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    #result-section {
+        font-size: 1.1rem;
+    }
 }

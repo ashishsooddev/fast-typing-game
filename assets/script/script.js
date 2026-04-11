@@ -75,16 +75,12 @@ function startGame() {
     timeDisplay.textContent = time;
 
     resultSection.classList.add("hidden");
-
     showWord();
-
     clearInterval(timer);
     timer = setInterval(updateTime, 1000);
-
     music.currentTime = 0;
     music.play();
 }
-
 startBtn.addEventListener("click", startGame);
 
 function showWord() {
@@ -94,23 +90,19 @@ function showWord() {
 function updateTime() {
     time = time - 1;
     timeDisplay.textContent = time;
-
     if (time <= 0) {
         endGame();
     }
 }
 
 input.addEventListener("input", function () {
-
     let typedWord = input.value.trim();
     let currentCorrectWord = randomWords[index];
 
     if (typedWord === currentCorrectWord) {
         score = score + 1;
         index = index + 1;
-
         scoreDisplay.textContent = score;
-
         input.value = "";
         if (index === words.length) {
             endGame();
@@ -131,7 +123,6 @@ function endGame() {
     music.pause();
 
     let percentage = ((score / words.length) * 100);
-
     currentWord.textContent = "Game Over!";
     finalScore.textContent =
         "Score: " + score +
