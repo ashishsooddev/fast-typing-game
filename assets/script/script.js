@@ -121,6 +121,10 @@ input.addEventListener("input", function () {
 
 });
 
+input.onpaste = function () {
+    return false;
+};
+
 function endGame() {
     clearInterval(timer);
     input.disabled = true;
