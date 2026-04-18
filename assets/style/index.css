@@ -105,7 +105,11 @@ button:hover {
 }
 
 #scoreboard {
-    margin-top: 20px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    width: 280px;
+    min-height: 400px;
     margin: 20px;
     padding: 10px;
     border-radius: 10px;
