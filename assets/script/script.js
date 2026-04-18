@@ -67,7 +67,7 @@ function startGame() {
     randomWords = shuffle([...words]);
     index = 0;
     score = 0;
-    time = 99;
+    time = 10;
 
     input.disabled = false;
     input.value = "";
@@ -149,11 +149,12 @@ function endGame() {
     currentWord.textContent = "Game Over!";
     finalScore.textContent =
         "Score: " + score +
-        " | Accuracy: " + percentage.toFixed(2) + "%";
+        " | Accuracy: " + percentage + "%";
 
     resultSection.classList.remove("hidden");
     
     saveScore(score, percentage);
+    displayScores();
 }
 
 function displayScores() {
@@ -174,3 +175,7 @@ function displayScores() {
         scoreCard.appendChild(li);
     }
 }
+
+window.onload = function () {
+    displayScores();
+};
