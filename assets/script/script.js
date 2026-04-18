@@ -24,6 +24,7 @@ const startBtn = document.getElementById("start-button");
 const resultSection = document.getElementById("result-section");
 const finalScore = document.getElementById("final-score");
 const music = document.getElementById("game-music");
+const scoreList = document.getElementById("score-list");
 
 function shuffle(arr) {
     let newArray = [...arr];
