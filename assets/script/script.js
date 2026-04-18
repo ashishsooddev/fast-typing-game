@@ -149,9 +149,33 @@ function endGame() {
     currentWord.textContent = "Game Over!";
     finalScore.textContent =
         "Score: " + score +
-        " | Accuracy: " + percentage.toFixed(2) + "%";
+        " | Accuracy: " + percentage + "%";
 
     resultSection.classList.remove("hidden");
     
     saveScore(score, percentage);
+    displayScores();
 }
+
+function displayScores() {
+
+    let scores = JSON.parse(localStorage.getItem("scores")) || [];
+
+    scoreCard.innerHTML = "";
+
+    for (let i = 0; i < scores.length; i++) {
+
+        let li = document.createElement("li");
+
+        li.textContent =
+            (i + 1) + ". " +
+            scores[i].hits + " words - " +
+            scores[i].percentage + "%";
+
+        scoreCard.appendChild(li);
+    }
+}
+
+window.onload = function () {
+    displayScores();
+};
