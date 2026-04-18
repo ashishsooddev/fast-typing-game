@@ -25,6 +25,8 @@ const resultSection = document.getElementById("result-section");
 const finalScore = document.getElementById("final-score");
 const music = document.getElementById("game-music");
 
+const scoreCard = document.getElementById("score-card");
+
 function shuffle(arr) {
     let newArray = [...arr];
 
@@ -117,16 +119,39 @@ input.onpaste = function () {
     return false;
 };
 
+function saveScore(hits, percentage) {
+    let scores = [];
+    let storedScores = localStorage.getItem("scores");
+
+    if (storedScores !== null) {
+        scores = JSON.parse(storedScores);
+    }
+    let newScore = {
+        hits: hits,
+        percentage: percentage
+    };
+
+    scores.push(newScore);
+    scores.sort(function (s, p) {
+        return p.hits - s.hits;
+    });
+
+    scores.splice(9);
+    localStorage.setItem("scores", JSON.stringify(scores));
+}
+
 function endGame() {
     clearInterval(timer);
     input.disabled = true;
     music.pause();
 
-    let percentage = ((score / words.length) * 100);
+    let percentage = ((score / words.length) * 100).toFixed(2);
     currentWord.textContent = "Game Over!";
     finalScore.textContent =
         "Score: " + score +
         " | Accuracy: " + percentage.toFixed(2) + "%";
 
     resultSection.classList.remove("hidden");
+    
+    saveScore(score, percentage);
 }
