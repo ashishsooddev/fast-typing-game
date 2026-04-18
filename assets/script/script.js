@@ -67,7 +67,7 @@ function startGame() {
     randomWords = shuffle([...words]);
     index = 0;
     score = 0;
-    time = 10;
+    time = 99;
 
     input.disabled = false;
     input.value = "";
